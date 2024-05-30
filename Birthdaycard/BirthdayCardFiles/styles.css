@@ -13,10 +13,13 @@ Also, consider how you should select the image
     font-weight: 400;
     font-style: normal;
   }
+  body{
+    background: linear-gradient( #a2d2ff, #EFB0C9)
+  }
 
 *{
     color: white;
-    background-color: #a2d2ff; 
+   ; 
     text-align: center;
     font-family: 'Happy Monkey';
     text-shadow: 0px 0px 2px black; 
@@ -53,15 +56,38 @@ h1, h2, h3, h4, p{
     flex-direction: column;
     align-items: center;
 }
+
 .gift-cover{
    border: 6px solid white; 
    border-radius: 10px;
    height: 400px;
+   width: 400px;
    margin: 0 auto;
    width: 400px;
-   background-image: url("images/gift-cover.jpg");
+   background-image: url("./img/gift-cover.jpg");
    background-size: cover;
 }
+
 .gift-cover:hover{
-    background-image: url("");
+    background-image: url("./img/happy.gif");
+}
+
+#gift-img-happy:hover {
+    background-image: url("./img/happy.gif");
+}
+
+#gift-img-hot:hover {
+    background-image: url("./img/hot.gif");
+}
+
+#gift-img-genius:hover {
+    background-image: url("./img/genius.gif");
+}
+
+#gift-img-badass:hover {
+    background-image: url("./img/badass.gif");
+}
+
+#gift-img-cheers:hover {
+    background-image: url("../img/cheers.gif");
 }
