@@ -1,0 +1,67 @@
+/*
+Challenge:
+Style the app according to the provided design.
+The font is called "Happy Monkey" and can be
+embedded via Google Fonts.
+
+Don't know how to make an image round? Google it!
+Also, consider how you should select the image 
+(class vs id vs element selector).
+*/
+.happy-monkey-regular {
+    font-family: "Happy Monkey", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+*{
+    color: white;
+    background-color: #a2d2ff; 
+    text-align: center;
+    font-family: 'Happy Monkey';
+    text-shadow: 0px 0px 2px black; 
+    
+} 
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1, h2, h3, h4, p{
+    text-shadow: 0px 0px 2px black;
+} 
+#bday-img{
+    width: 200px;
+    border-radius: 50%;
+    border: 6px solid #EFB0C9;
+}
+#date {
+    margin: 0;
+    background: #EFB0C9;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+#age{
+    background: #EFB0C9;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin:  10px 0;
+}
+.gift-section{
+   margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gift-cover{
+   border: 6px solid white; 
+   border-radius: 10px;
+   height: 400px;
+   margin: 0 auto;
+   width: 400px;
+   background-image: url("images/gift-cover.jpg");
+   background-size: cover;
+}
+.gift-cover:hover{
+    background-image: url("");
+}
