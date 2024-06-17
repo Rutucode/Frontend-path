@@ -1,0 +1,58 @@
+/**
+Palette: https://scrimba.com/links/hometown-palette
+RED: #E63946
+LIGHT: #F1FAEE
+AQUA: #A8DADC
+LIGHT BLUE: #457B9D
+DARK BLUE: #1D3557
+
+*/
+
+.dm-serif-display-regular {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .dm-serif-display-regular-italic {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+   
+    text-align: center;
+}
+.main{
+
+width: 100vw;
+height: 100vh;
+gap: 0px;
+opacity: 0px;
+margin: 0;
+padding: 0;
+background-image: url("https://www.tripsavvy.com/thmb/PF0Mnap5ooz3fr8N_AB9xXAO8EQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-521733846_Darkroom-125adbb08a044a2db915fefc1eb741b2.jpg");
+background-repeat: no-repeat;
+background-size: cover ;
+font-family:  "DM Serif Display", serif;
+font-weight: 400;
+font-style: normal;
+
+}
+.head{
+    justify-content: center;
+    color: white;
+    background-color:  #1D3557; 
+}
+/*
+img {
+ 
+width: 100px;
+}
+*/
