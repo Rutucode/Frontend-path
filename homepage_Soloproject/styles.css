@@ -7,52 +7,127 @@ LIGHT BLUE: #457B9D
 DARK BLUE: #1D3557
 
 */
-
+:root {
+  --Prim: #bc6c25;
+  --exblu: #457b9d;
+  --neu: #fefae0;
+  --Prim2: #dda15e;
+  --Secd1: #283618;
+  --Second2: #606c38;
+  --font1: "DM Serif Display", serif;
+  --font2: "Playfair Display", serif;
+}
 .dm-serif-display-regular {
-    font-family: "DM Serif Display", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .dm-serif-display-regular-italic {
-    font-family: "DM Serif Display", serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-*{
-    margin: 0;
-    padding: 0;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-display-regular-italic {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 body {
-   
-    text-align: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
-.main{
+.main {
+  background-image: url("https://www.tripsavvy.com/thmb/JR95Cc--TdV7YCR7noT5uAy0mMs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-521733846_Darkroom-125adbb08a044a2db915fefc1eb741b2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  height: 100vh;
+  font-family: var(--font2);
 
-width: 100vw;
-height: 100vh;
-gap: 0px;
-opacity: 0px;
-margin: 0;
-padding: 0;
-background-image: url("https://www.tripsavvy.com/thmb/PF0Mnap5ooz3fr8N_AB9xXAO8EQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-521733846_Darkroom-125adbb08a044a2db915fefc1eb741b2.jpg");
-background-repeat: no-repeat;
-background-size: cover ;
-font-family:  "DM Serif Display", serif;
-font-weight: 400;
-font-style: normal;
-
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
 }
-.head{
-    justify-content: center;
-    color: white;
-    background-color:  #1D3557; 
+.head1 {
+  text-align: center;
+  color: var(--neu);
+  background-color: var(--Prim);
+  padding: 16px 10px;
+  height: 42px;
+  border-radius: 10px;
+}
+.head2 {
+  color: var(--neu);
+  background-color: var(--Prim2);
+  border-radius: 10px;
+  padding: 16px 10px;
+  box-shadow: 0 0 0.5px var(--Secd1);
+}
+
+.section {
+  background-color: var(--neu);
+  font-family: "Poppins", sans-serif;
+  padding: 25px;
+  color: #bc6c25;
+}
+
+.to-visit {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.p1,
+.p2,
+.p3 {
+  color: var(--Secd1);
+}
+
+#fort,
+#Museum,
+#Ganpati-Mandir {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.guide-card {
+  background-color: var(--Prim);
+  width: 500px;
+  margin: 65px auto;
+  height: 294px;
+  gap: 0px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 8px solid var(--Prim2);
+}
+.card-text {
+  font-family: "Poppins", sans-serif;
+  color: var(--neu);
+  margin: 5px;
+}
+.card-img {
+  width: 180px;
+  height: 248.67px;
+  border-radius: 10px;
+  margin: 1em;
+}
+.card-img img {
+  border-radius: 10px;
 }
 /*
-img {
+  comment
+  
  
-width: 100px;
-}
-*/
+  */
