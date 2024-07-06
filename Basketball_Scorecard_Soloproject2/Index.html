@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basketball Scorecard</title>
+    <link rel="stylesheet" href="Styles.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="container">
+        <div>
+          <h3>HOME</h3>
+          <div class="score">
+            <h1 id="home-score">0</h1>
+          </div>
+          <div class="btn1">
+            <button
+              class="bn"
+              id="home-score-btn-1"
+              onclick="increaseHomeScoreOne()"
+            >
+              +1
+            </button>
+            <button
+              class="bn"
+              id="home-score-btn-2"
+              onclick="increaseHomeScoretwo()"
+            >
+              +2
+            </button>
+            <button
+              class="bn"
+              id="home-score-btn-3"
+              onclick="increaseHomeScorethree()"
+            >
+              +3
+            </button>
+          </div>
+        </div>
+        <div>
+          <h3>GUEST</h3>
+          <div class="score">
+            <h1 id="guest-score">0</h1>
+          </div>
+          <div class="btn2">
+            <button
+              class="bn"
+              id="guest-score-btn-1"
+              onclick="increaseGuestScoreOne()"
+            >
+              +1
+            </button>
+            <button
+              class="bn"
+              id="guest-score-btn-2"
+              onclick="increaseGuestScoretwo()"
+            >
+              +2
+            </button>
+            <button
+              class="bn"
+              id="guest-score-btn-3"
+              onclick="increaseGuestScorethree()"
+            >
+              +3
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="timer"><span id="time">120:00</span> mins</div>
+      <div class="reset-sec">
+        <button id="reset-btn" class="resetBtn" onclick="resetScore()">
+          RESET
+        </button>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
