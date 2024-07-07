@@ -91,3 +91,5 @@ window.onload = function () {
 };
 
 resetBtn.addEventListener("click", resetScore);
+
+

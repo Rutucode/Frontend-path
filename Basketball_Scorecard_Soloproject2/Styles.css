@@ -20,6 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin-top: 50px;
 }
 
 .container {
@@ -95,9 +96,9 @@ h3 {
   align-items: center;
 }
 .reset-sec {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   margin: 30px auto;
 }
 .resetBtn {
@@ -113,6 +114,7 @@ h3 {
   line-height: 27.81px;
   text-align: center;
   color: var(--btn-color);
+  cursor: pointer;
 }
 
 .timer {
