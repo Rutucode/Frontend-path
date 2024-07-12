@@ -1,0 +1,141 @@
+.karla {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  background: #1c1c1c;
+  display: flex;
+}
+.box {
+  background: #1f2937;
+  width: 550px;
+  height: 550px;
+  top: 64px;
+  left: 62px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.contain {
+  padding: 0 52px;
+}
+
+.heading {
+  margin: 0;
+  padding: 115px 0 0 0;
+  width: 354px;
+  height: 80px;
+  top: 115px;
+  left: 52px;
+  font-family: "Karla", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 40px;
+  letter-spacing: -0.025em;
+  text-align: left;
+  color: #ffffff;
+}
+
+.highlight {
+  color: #55f991;
+}
+.support {
+  width: 372px;
+  height: 28px;
+  top: 205px;
+  left: 52px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  color: #d5d4d8;
+}
+
+.btn {
+  background: #10b981;
+  width: 191px;
+  height: 42px;
+  top: 284px;
+  left: 52px;
+  padding: 9px 17px 9px 15px;
+  gap: 12px;
+  border-radius: 6px;
+  border: none;
+  opacity: 0px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #ffffff;
+  box-shadow: 0px 1px 2px 0px #0000000d;
+}
+
+.line {
+  border: 1px solid #2f3e53;
+  width: 446px;
+  height: 0px;
+  top: 361px;
+  left: 52px;
+  gap: 0px;
+  opacity: 0px;
+  rotate: -0 deg;
+  margin: 35px 0;
+}
+
+.input {
+  display: flex;
+}
+.pass {
+  width: 211px;
+  height: 39px;
+  top: 396px;
+  left: 52px;
+  border-radius: 6px;
+  opacity: 0px;
+  background: #273549;
+  border: none;
+}
+
+.pass {
+  color: #55f991;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: center;
+  justify-content: center;
+  padding-top: 4px;
+}
+
+.copy-btn {
+  background: #10b981;
+  margin-right: 1em;
+  border-radius: 6px;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #ffffff;
+  box-shadow: 0px 1px 2px 0px #0000000d;
+}
+.copy-btn:hover {
+  border: 2px solid #10b981;
+  background-color: #273549;
+  color: #10b981;
+}
