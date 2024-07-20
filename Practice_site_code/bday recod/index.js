@@ -19,6 +19,7 @@ const birthdayInputField = document.getElementById("birthday-input");
 const submitButton = document.getElementById("submit-button");
 
 
+
 submitButton.addEventListener("click", function () {
   //  console.log(birthdayInputField.value) Add this value to database
   push(referenceInDB, birthdayInputField.value);

@@ -3,6 +3,8 @@ import {
   getDatabase,
   ref,
   push,
+  onValue,
+  remove,
 } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 
 const firebaseConfig = {
@@ -34,7 +36,20 @@ function render(leads) {
   ulEl.innerHTML = listItems;
 }
 
-deleteBtn.addEventListener("dblclick", function () {});
+onValue(referanceInDB, (snapshot) => {
+  const snapshotDoesExist = snapshot.exist();
+  if (snapshotDoesExist) {
+    // console.log(snapshot.val()) // to render leads it needs to turn object to an array
+    const snapshotValues = snapshot.val(); // turn object to an array
+    const renderValueLeads = Object.values(snapshotValues);
+    // console.log(renderValueLeads)
+    render(length);
+  }
+});
+
+deleteBtn.addEventListener("dblclick", function () {
+  remove(referanceInDB);
+});
 
 inputBtn.addEventListener("click", function () {
   //console.log(inputEl.value);

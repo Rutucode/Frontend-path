@@ -56,7 +56,7 @@ function convertKgToPound() {
   let inputval = inputValue.value;
   valueOfKg.innerHTML = `${inputval} kilos = ${(
     inputval * kilogramToPound
-  ).toFixed(2)} ${inputval} | ${inputval} pounds = ${(
-    inputval * poundToKg
-  ).toFixed(2)} kilos`;
+  ).toFixed(2)} pounds | ${inputval} pounds = ${(inputval * poundToKg).toFixed(
+    2
+  )} kilos`;
 }

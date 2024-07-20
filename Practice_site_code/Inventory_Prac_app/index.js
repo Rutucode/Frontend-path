@@ -16,8 +16,8 @@ const productNameInputField = document.getElementById("product-name-input")
 const productValueInputField = document.getElementById("product-value-input")
 const submitButton = document.getElementById("submit-button")
 
-onValue(referenceInDB, (snapshot)=>{
-    console.log(snapshot)
+onValue(referenceInDB, (snapshot)=>{ // what part of data base by referenceInDB
+    console.log(snapshot) // submit button attach eventlistner , cliks runs this code, listen to firebase
   })
   
 
