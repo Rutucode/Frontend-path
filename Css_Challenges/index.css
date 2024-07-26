@@ -1,0 +1,16 @@
+* {
+  text-align: center;
+}
+
+:root {
+  --font: "Roboto", sans-serif;
+}
+
+body {
+  font-family: var(--font);
+}
+
+.container {
+  width: 570px;
+  margin: 0 auto;
+}
