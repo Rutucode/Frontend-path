@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
+    <link rel="stylesheet" href="index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,26 +13,43 @@
     />
   </head>
   <body>
-    <div class="container">
-      <h1>Hello, my name is Rutuja</h1>
-      <img src="" alt="Portraint image" />
-      <h2>I am a graphic designer</h2>
-      <p>
-        Ultricies morbi urna lectus magna quisque ultricies velit enim nisi mi
-        volutpat amet id id porta auctor at viverra consequat turpis quam enim
-        amet vulputate.
-      </p>
-
-      <h2>My most recent article</h2>
-      <article>
-        <h3>Design systems that scale</h3>
-        <p>Writen by Sophie on June 19, 2020</p>
+    
+      <header class="section-1">
+        <div class="container">
+        <h1>Hello, my name is <span class="highlight">Rutuja</span></h1>
+        <img
+          src="download (6).jpeg"
+          alt="Portraint image"
+          class="display-picture"
+        />
+      </div>
+      </header>
+      <section class="section-2">
+        <div class="container">
+        <h2>I am a <span class="highlight">UI/UX Designer</span></h2>
         <p>
           Ultricies morbi urna lectus magna quisque ultricies velit enim nisi mi
-          volutpat amet id id porta auctor at viverra consequat turpis quam
-          enim... <a href="#">continue reading</a>
+          volutpat amet id id porta auctor at viverra consequat turpis quam enim
+          amet vulputate.
         </p>
-      </article>
+        <a href="#" class="btn">See my work</a>
+      </div>
+      </section>
+      <section class="section-3">
+        <div class="container">
+        <h2>My most recent <span class="highlight">article</span></h2>
+        <article>
+          <h3>Design systems that scale</h3>
+          <p class="small-text">Writen by Sophie on June 19, 2020</p>
+          <p>
+            Ultricies morbi urna lectus magna quisque ultricies velit enim nisi
+            mi volutpat amet id id porta auctor at viverra consequat turpis quam
+            enim... <a href="#">continue reading</a>
+          </p>
+          <a href="#" class="btn">see all my work</a>      
+        </article>
+      </div>
+      </section>
     </div>
   </body>
 </html>

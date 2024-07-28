@@ -1,0 +1,182 @@
+/* Changes -
+add rem to font size */
+:root {
+  --font: "Source Sans 3", sans-serif;
+}
+/* Layout */
+html,
+body {
+  margin: auto;
+  padding: 0;
+  width: 375px;
+  font-family: var(--font);
+  box-sizing: border-box;
+}
+
+.container {
+  /*  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Box {
+  width: 375px;
+  height: 612px;
+  overflow: auto;
+  overflow-x: hidden;
+  scrollbar-color: lightgrey;
+  scrollbar-width: thin;
+  margin: auto;
+  border: 2px solid #282828;
+}
+
+/* Header */
+
+.logo-img {
+  width: 127px;
+  height: 100%;
+}
+
+.profile-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+header {
+  /* width: 375px; */
+  padding: 16px 16px 17px 15px;
+  border-bottom: 1px solid #c6c6c6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+/* Type */
+h3,
+p {
+  margin: 0;
+}
+
+/* main */
+
+main {
+  width: 375px;
+}
+
+.section-1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 375px;
+}
+
+.post-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin: auto 10px;
+  padding: 10px 0;
+}
+
+.user-img {
+  width: 34px;
+  height: 34px;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+}
+
+.user-info {
+  margin: 0;
+}
+
+.follower-id {
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16.34px;
+  text-align: left;
+  color: #000000;
+}
+
+.follower-location {
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.08px;
+  text-align: left;
+}
+
+.post {
+  width: 375px;
+  height: 375px;
+}
+
+.post-img {
+  width: 375px;
+  height: 375px;
+}
+
+.post-content {
+  padding: 10px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  margin: 10px 10px;
+}
+
+.post-icon {
+  width: 24px;
+  height: 24px;
+  top: 451px;
+  left: 10px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.like-icon {
+  cursor: pointer;
+  background: none;
+}
+.like-icon.clicked {
+  fill: palevioletred;
+  stroke: none;
+}
+
+.like-icon:hover {
+  fill: palevioletred;
+  stroke: none;
+  transform: scale(1.1);
+}
+
+.likes {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16.34px;
+  text-align: left;
+  /* padding: 10px 0; */
+  margin: 0;
+}
+
+.user-name {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16.34px;
+  text-align: left;
+}
+.tag-line {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16.34px;
+  text-align: left;
+}
