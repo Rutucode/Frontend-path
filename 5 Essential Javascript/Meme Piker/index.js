@@ -35,9 +35,22 @@ import { catsData } from "./data.js";
 
 const emotionRadios = document.getElementById("emotion-radios");
 
-emotionRadios.addEventListener("chnage", (e) => {
-  console.log(e.target.id);
-});
+emotionRadios.addEventListener("chnage", highlightCheckedOption);
+
+function highlightCheckedOption(e) {
+  //   document.getElementById(e.target.id).style.accentColor = 'red'
+  document.getElementById(e.target.id).parentElement.classList.add("highlight");
+  /*
+Challenge:
+1. highlightCheckedOption should take control 
+ of the selected radio input and add the CSS
+ class of "highlight" to its classlist.
+ 1. Change the code in line 8 so we add the 
+   'highlight' class to the parent of the 
+   selected input radio.
+*/
+  //console.log(e.target.id)
+}
 
 function getEmotionsArray(cats) {
   const emotionArry = [];
