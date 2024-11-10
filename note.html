@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    - Script tags in HTML are where you can write JS. add **src="filename"** to link js file to HTML file.
+
+```html
+<script src= "index.js" type="module"><script>
+```
+
+- **console.log()** to log to console
+- JS reads top to bottom. Can't access things before they're initialized.
+- **function functionName() {}**
+- Function is command.
+- Run is call or invoke.
+- **++** is self plus one
+- **innerText** gets/sets the text inside the element called. Can't read spaces.
+- When it's a string VS a number the string always wins.
+- You can use an escape character (/) to display a " in a string surounded by "".
+- += is self plus the opposite of the equal sign.
+- Name elements you grab **elementPurposeEl**.
+- **let** - creates the element/variable, it can and will be changed later.
+- **const** creates the element/variable, it can't be changed later.
+- **var** is dead.
+- **textContent** gets/sets the text inside the element called. It can read spaces.
+- use `` when you need to add variables to text.
+- You can't use the same name for functions as in an element.
+- To immediately run a function wrap the function in () and end it in (); **(function functionName() { function actions })( )**
+- Using onclick in HTML is less ideal then using **addEventListener("click", function() { })**. You need to use ; at the end of all code for this to work.
+- Operator precedence is PEMDAS in JS.
+- === means strictly equal
+- == is less strict. It converts numbers into strings if necessary.
+- = means it will become.
+- Use **hasElementDescription** for naming a boolean.
+- An empty string "" is a falsey value.
+- Expressions passed into conditions are translated into booleans.
+- Declare means to create.
+- **querySelector** is more dynamic. You have to be more specific and identify the element how you would use in CSS (with . or # before the name, it can take input tag as well).
+- Arrays
+    - Arrays are stored in [].
+    - They start at 0.
+    - To call an array item do **arrayName[numberYouWant].**
+    - **arrayName.length** counts starting at one.
+    - An array is a copmlex data type.
+    - arrayName.push(newItem) adds content to the end of an array.
+    - **arrayName.pop( )** removes the last item of an array.
+- for (let i = 0; i < maxAmountOfLoop; i++){}
+- export function(){} exports to another file if you import (import { desiredFunction } from "fileLocation") in that other file.
+- Anytime you use the import or export in JS you have to add type="module" to the HTML JS file reference.
+- Name your function by thinking about what it is doing and what it's doing that to.
+- If you need a element from function1 use a parameter in function2 and call function2 in function1.
+- Object
+    - let objectName - { "key": "value"}
+    - Turn an objects values into an array by using Object.values(objectName).
+    - Turn an objects keys into an array by using Object.keys(objectName)
+    - Turn an object into an array of arrays by using Object.entries(objectName))
+- .append(element) adds the element to whatever you're appending to.
+- elementName.addEventListener("click"), function() {}
+- getElementbyID
+- querySelector
+- getElementbyClassName
+- The Dialog Tag
+    - dialog.show() opens a non-modal dialog
+    - dialog.showModal() opens a modal
+    - dialog.close() Closes the dialog
+    - To close the dialog when clicking outside the dialog box: dialog.addEventListener("click", e=> { const dialogDimentions = dialog.getBoundingClientRect() if ( // clicking outside the dialog clientX < dialogDimensions.left || e.clientX > dialogDimensions.right || e.clientY < dialogDimensions.top || e.clientY > dialogDimensions.bottom || // clicking the cancel button e.target.id === "cancel-dialog-btn" ){ dialog.close() } })
+- setTimeout
+    - Delays the execution of the code inside it.
+    - Method.
+    - setTimeout(function(){ what you don't want to fire }, number of miliseconds you want to delay by)
+- element.style
+    - Targets an element's style.
+    - elementName.style.what you want to change = "what you want to change it to"
+- To override the form information being pushed into the URL query screen, formElement.addEventListener('submit', function(event){ event.preventDefault(); })
+- To take control of an element is to call the element.
+- Any button in a form will submit by default. To stop this change the type. type="reset, submit, button"
+- It's best practice to not declare something unless you have to.
+- It's best practice to only use innerHTML when you have to. Use innerText instead.
+- FormData
+    - FormData(formElement)
+    - Returns all inputed data into an object.
+    - Is a constructor function.
+    - const formElementData = new FormData(formElement)
+    - To see what the object holds use formElementData.get(nameData)
+- Disabling Elements
+    - Controlling when elements are usable.
+    - To disable on page load add disabled to HTML tag.
+    - To disable after load, set disabled to true.
+- Class List
+    - element.classList.action('className')
+    - Just element.classList will return the entire class list of the element.
+    - element.classList.toggle('className') will add and remove the className from the element.
+    - element.classList.remove('className') will remove className from the elements class list.
+    - element.classList.add('className') will add className to the elements class list.
+- element.classList.toggle('className') switches the usage of the classlist back and forth.
+- for of
+    - A nicer way of iterating.
+    - Iterates over object data structures.
+    - Iterates over the values of an iterable object. (examples of iterable objects include arrays, strings).
+- for in
+    - for (let item in items){ console.log(items[item]) }
+    - Iterates over object data structures.
+    - iterates over all enumerable property keys of an object.
+- Each function should do one thing.
+- To link a js file to another js file, put export in front of the information you want to export, and in the file you want the information in write, and in the HTML fyle add import = "module".
+    
+    > import { information you want to export },from './fileThatHasInfo'
+    > 
+- .includes()
+    - A method for checking if an array holds a given value.
+    - level: easy
+    - returns boolean
+- render() ---???????
+- event.target.id
+    - container.addEventListener('click', function(event){ console.log(event.target.id) })
+    - If you log event, you will see PointerEvent{ isTrusted: boolean }
+    - The target will show the most exact location it can (p.className#idName).
+    - An empty area in the container will return a string.
+    - event.target.id would return just the id of what was clicked.
+    - adding .parentElement to the end of what your selecting (event.target.id).parentElement will return the parent element of the element that had an event. So <div class="parent-element"> <div id="childElement"></div> </div> would return <div class="parent-element">.
+    - event.target will return the entire tag.
+    - You can add a numeric seperator, _, between numbers in the code to make it more readable and it will display without it. const longNumber = 9_007_199_254_740_991 console.log(longNumber)//returns 9007199254740991 console.log(typeof longNumber)//returns number
+    - 9007199254740991 is the highest number js can calculate without losing precition.
+    - For numbers bigger than 9007199254740991 you can use BigInt(). const longerNumber = 9007199254740991345n console.log(typeof longerNumber) // returns bigint . BigInt() is a constructor. const longerNumber = BigInt(9_007_199_254_740_991_345) console.log(typeof longerNumber) // returns bigint console.log(longerNumber) // returns 9007199254740990976 . They cannot math, you cannot convert a BigInt value to a number. It is useful in contexts requiring precise handling of large integers, such as cryptography, or when interacting with databases that use large integer identifiers.
+- Event Listeners
+    - container.addEventListener('listenerOfChoice', function{})
+    - click
+    - dblclick
+    - change
+    - [Events I have never used.](https://www.w3schools.com/jsref/dom_obj_event.asp)
+- Parent Element
+    - .parentElement
+    - add to the end of
+- Grabbing Elements
+    - To one element with a given id use getElementByid('idName').
+    - To grab all elements with a given class use getElementsByClassName('className').
+    - To grab any element use querySelector('whatYouWant'), this is unique because it can grab psudo selectors.
+- Console Log
+    - console.log()
+    - Can pass in parameters
+    - [Check the Static Method](https://developer.mozilla.org/en-US/docs/Web/API/console/log_static)
+- To get wether or not an item was checked, get the element and add .checked like element.checked
+- When naming a boolean, it is common to start the name with is or has. const isChecked = document.querySelector('input[type="radio"]:checked') .value
+- The Filter Method
+    - oldArray.filter(function(arrayItemName){return true})
+    - Getting only the elements we want from an array.
+    - Creates a new array.
+    - To filter an array of objects,
+- Use get at the begining of the name of a function when you will be returning something.
+- foreach()
+    - A method for iterating over arrays.
+    - arrayName.foreach(function(arrayItemName, index) {})
+    - Does not return a new array.
+    - Use .forEach() if you don't need to create a new array.
+- Data Attributes
+    - Sorting Extra Information in HTML Elements
+    - Often written in documents as data-*, the star representing the name you choose.
+    - data-unique-name = "data"
+    - To call it in js, as an event, it will be under target, in dataset, so it would be event.target.dataset.dataAttributeName(without data).
+    - Great way to relate items to an id, without re-using an id.
+    - Don’t use Uppercase letters when naming **data attributes** in HTML
+    - If you use capital letters when assinging the data attribute, make them lowercase in js. It is best to just avoid uppercase letters.
+    - If you use cabob-case when asigning the data attribute, you will need to make it camalCase in js. This is the best practice for multi-word attributes.
+- One event listener is DRYer than many.
+- Copying Objects and Arrays
+    - When you copy them in JS you are making a shallow copy.
+    - To make a real copy, you make a [deep copy](https://developer.mozilla.org/en-US/docs/Glossary/Deep_copy).
+- To switch the value of a boolean (false to true, true to false) write boolean = !boolean
+- Using else if instead of another if will prevent the system from reading unused code.
+- Conditionally Render CSS
+    - Giving elements different classes under different conditions.
+    - let boolean = false; thingToClick.addEventListener('click', function(element){ boolean = !boolean; if(boolean){ booleanClass = 'className'; }; let booleanHTML = <div class="${booleanClass}">></div> });
+- UUID
+    - Universally Unique Identifiers
+    - A string of 36 characters.
+    - Often used to identify pieces of data.
+    - Highly likely to be globally unique.
+    - Also known as GUID, or Globally Unique Identifier.
+    - Can have a UUID created with a CDN
+        - The current most common is Version 4 UUID, as it uses randomly generated characters.
+        - One of the most popular tools for generating UUIDS is [UUID JS](https://github.com/uuidjs/uuid#cdn-builds). To copy this, go to the readme, select the CDN Builds link, copy the import, paste it in your project (test it). Make sure your html has type="module" in the script tag. Return the uuidv4 function (you can rename that) as a function uuidv4()
+- arrayName.unshift(element) adds the element to the beginning of the array.
+- Object Destructuring
+    - Extract properties from objects.
+    - It enables us to extract properties from objects into distinct variables.
+    - Helps keep your code DRY.
+    - const {propertyVariableName, propertyVariableName, propertyVariableName} = objectName console.log(`display this ${propertyVariableName}'s value`)
+- The .map() Method
+    - Iterating over arrays.
+    - const newArray = oldArray.map(function(nameValues, index) { //iterates through each array value //index will return the index of each value })
+    - could be stored in a function instead of a const.
+    - Use .map() if you need to make use of the new array it returns
+- The .join() Method
+    - Strings from arrays.
+    - Concatenates elements of an array into a string.
+    - You choose how elements are separated.
+    - It returns the new string.
+    - console.log(arrayName.join('what you want between each value'))
+    - To have no seperator just keep an empty string.
+- All methods must end with parenthesis.
+- To find out what type an element is put typeof before it. It will return if it's a string, boolean, ect.
+- break and continue can be use within for loops.
+- You can only chain onto a method if it returns an array.
+- The For Loop
+    - for (let i = 0; i < arr.length; i++){}
+    - for (let i = 0; i < arr.length; i++){ if (arr.key < 5){break} if (arr.key > 5 {continue} console.log('this will not run if the arr.key is greater than or less than five')) }
+- Various Array Methods
+    - arr.every(function(arrItem){ return arrItem >= 30 }) Every array item will be subject to the code within the function, and you will get a boolean true or false response. It will only return true if every item is true.
+    - .some(function(arrItem){ return arrItem >= 30 }) Every array item will be subject to the code within the funciton, and you will get a boolean true or false response. It will return true if one or more items are true.
+    - arr.find(function(arrItem){ return arrItem > 30 }) Every array item will be subject to the code within the function until one is true, you will get the items content as a response. If none are true, then it will return undefined.
+    - .findIndex(function(arrItem){ return arrItem > 30 }) Every array item will be subject to the code within the function until one is true, you will get the items index number as a response. If no item is true, it will return -1.
+    - arr.indexOf(arrItemContent) Every array item will be tested for the content until one is found with it, then it will return that items index number.
+    - arr.at(-1) Takes a positive or negative integer and returns the item at that index. Negative integers will count back from the end of the array.
+- Replace Method
+    - text.replace(pattern, replacement)
+    - const text = "hello how are you?" text.replace('h', 'H') will return 'Hello how are you', changing the first h but not the second.
+- ReplaceAll Method
+    - text.replaceAll(pattern, replacement)
+    - const text = "hello! how are you this morning?" text.replaceAll('h', 'H') will return 'Hello! How are you tHis morning', changing the all h to H.
+    - To avoid the above problem of capitalizing letters within words you can use regex (regular expression). This is a sequence of characters that specifies a match pattern in text. /[a-zA-Z1-9]/ will find any number 1-9 and any letter, lower or uppercasea-z. /^\d{5} (-\d{4})?$/ will validate US zip codes. In this case you would do text.replaceAll(/\b(h)\b/g, 'H')
+    - You can also use functions in the replaceAll. const text = "I love you with all my heart!" console.log(text.replaceAll(/\b(love|heart)\b/g, function(match){ return `${match} <3` })) will log "I love <3 you with all my heart <3".
+- RegExp
+    - \d = any number between 1 and 9
+    - . = any single character
+    - [abc] = will match a, b or c
+    - [^abc] = all but a, b or c
+    - [0-6] = will match any single 0, 1, 2, 3, 4, 5 or 6
+    - [^a-p] = will match q through z
+    - \w = includes any single alphanumeric character plus the underscore
+    - [a-z] is different then [A-Z]
+    - a{3} = aaa
+    - [wxy]{5} = any sequence with exactly 5 characters that are either w, x or y
+    - .{2,6} = matches any sequence that is between 2 and 6 characters long
+    - \d = any single digit between 0 and 9
+    - a* = 0 or more of a
+    - ab?c = abc or ac (b is optional)
+    - _ = a space
+    - \t = tab
+    - \n = new line
+    - \r = return
+    - \s = any white space
+    - \S = no white space
+    - g = g flag = global = looking for all instances, not just one. Needed if you are using replace all after the ending /
+    - i = i falg = case insensitive =
+    - regexp has a test method that returns a boolean. regex.test(text)
+    - There is a RegExp Constructor. const textText = "hello world" const regex = new RegExp(testText, 'gi')
+- hasOwn/hasOwnProperty
+    - hasOwn is more modern.
+    - Object.hasOwn(objectName, 'propertyName'), static method,
+    - objectName.hasOwnProperty('propertyName')
+    - Tells you weather the property is on the object.
+
+### Cookie content
+
+SetTimeout takes it out of the loop going on and adds delay in mili seconds
+
+### SetTimeout() method
+
+```jsx
+console.log('What is the capital of Peru?')
+
+setTimeout(function(){
+    console.log('Lima!')
+}, 3000)
+/*
+Challenge:
+1. Make the third console.log fire 3 seconds after 
+   the answer appears.
+*/
+setTimeout(function(){
+ console.log('Ready for next question?')  
+}, 6000)
+```
+
+### Element.style to change CSS properties
+
+```jsx
+const revealBtn = document.getElementById('reveal-btn')
+const answer = document.getElementById('answer')
+const question = document.getElementById('question')
+
+revealBtn.addEventListener('click', function(){
+    answer.style.display = 'block'
+    question.style.color = '#1434A4'
+    question.style.backgroundColor = '#68e1fd'
+    revealBtn.style.display = 'none'
+})
+
+```
+
+### HTML Forms input
+
+```html
+ <input 
+                    required
+                    type="number" 
+                    id="astronautAge" 
+                    name="astronautAge"
+                    placeholder="21"
+                     minlength="2"
+                    maxlength="7"
+                     min="21"
+                    max="120"
+                    pattern="[a-zA-Z0-9]+"
+
+                    >
+```
+
+[Regular expressions - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+
+### Forms input
+
+### Forms input
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Country Code Input</title>
+</head>
+<body>
+<form>
+<label for="countryCode">Enter 3-character country code:</label>
+<input type="text" id="countryCode" name="countryCode" maxlength="3" pattern="[A-Za-z]{3}" title="Please enter exactly 3 letters." required>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+```
+
+### Disable Default
+
+```jsx
+const loginForm = document.getElementById('login-form')
+
+loginForm.addEventListener('submit', function(e){ //e or event
+    e.preventDefault()
+})
+```
+
+### Get Specific Form Data & .get()
+
+```jsx
+const loginForm = document.getElementById('login-form')
+
+loginForm.addEventListener('submit', function(e){
+    e.preventDefault()
+    
+    const loginFormData = new FormData(loginForm)
+    console.log(loginFormData)
+    
+     const name = loginFormData.get('astronautName')
+    console.log(name) 
+    /*
+     
+    const name = loginFormData.get('astronautName')
+       const email = loginFormData.get('astronautEmail')
+     const password = loginFormData.get('astronautPassword')
+    console.log(name, email, password)*/
+})
+```
+
+### Button Disabled
+
+```jsx
+btn tag  add disabled
+closeBtn.disable = false //bool
+```
+
+### Mouseover
+
+- Fires when the mouse pointer enters an element **or any of its child elements**.
+- **Bubbles up** the DOM tree, meaning the event is triggered on parent elements as well.
+- Can lead to performance issues, especially with complex DOM structures, due to multiple event firings.
+
+### Mouseenter
+
+- Fires **only** when the mouse pointer enters the element itself.
+- **Doesn't bubble up** the DOM tree.
+- Generally more efficient and often preferred for most use cases.
+
+**Example:**
+
+HTML
+
+`<div id="parent">
+  <div id="child"></div>
+</div>`
+
+JavaScript
+
+```jsx
+`const parent = document.getElementById('parent');
+const child = document.getElementById('child');
+
+parent.addEventListener('mouseover',    [1.  github.com github.com](https://github.com/benzzle/interview) () => {
+  console.log('mouseover on parent');
+});
+
+parent.addEventListener('mouseenter', () => {
+  console.log('mouseenter on parent');
+});
+
+child.addEventListener('mouseover', () => {
+  console.log('mouseover on child');
+});
+
+child.addEventListener('mouseenter', () => {
+  console.log('mouseenter on child');
+});`
+```
+
+**Output:**
+
+- Moving the mouse over the child element will trigger:
+    - `mouseover` on both parent and child
+    - `mouseenter` only on child
+- Moving the mouse over the parent element without entering the child will trigger:
+    - `mouseover` on parent
+    - `mouseenter` on parent
+
+**In summary:**
+
+- Use `mouseenter` when you want to perform an action only when the mouse enters a specific element.
+- Use `mouseover` when you need to handle events for both the element and its children, but be aware of potential performance implications in complex DOM structures.
+
+**Generally, `mouseenter` is the preferred choice for most use cases due to its efficiency and clarity.**
+
+### Toggle Btn
+
+```jsx
+const sortBtn = document.getElementById('sort-btn')
+const container = document.getElementById('container')
+                  
+sortBtn.addEventListener('click', function(){
+    container.classList.toggle('reverse')
+})
+
+```
+
+### Meme Picker
+
+### For of
+
+```jsx
+const characters = [
+    {
+        title: 'Ninja',
+        emoji: '🥷',
+        powers: ['agility', 'stealth', 'aggression'],
+    },
+    {
+        title: 'Sorcerer',
+        emoji: '🧙',
+        powers: ['magic', 'invisibility', 'necromancy'],
+    },
+    {
+        title: 'Ogre',
+        emoji: '👹',
+        powers: ['power', 'stamina', 'shapeshifting'],
+    },
+    {
+        title: 'Unicorn',
+        emoji: '🦄',
+        powers: [ 'flight', 'power', 'purity'],
+    }
+]
+
+for (let character of characters){
+ //   console.log(character.powers)
+	for (let power of character.power){
+    console.log(power)}
+}
+```
+
+[Array - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+### Import-export files data
+
+import {catData} “/data.js”
+
+```html
+<input 
+					type="radio"
+					id="horses"
+					value="horses"
+					name="choice-radios" 
+					>
+					<!-- name should be same, so as not to select both options-->
+					<!-- for and id should be same -->
+```
+
+### Indude()
+
+```jsx
+const emojis = ['🐥','🐯','🐼']
+// console.log(emojis.includes('🐴'))
+```
+
+### ! operator
+
+### event.target.id
+
+```jsx
+emotionRadios.addEventListener("change", (e)=>{
+    console.log(e.target.id)
+})
+
+```
+
+### .parentElement
+
+### getElementsByClassName()
+
+```jsx
+
+    const productsArray = document.getElementsByClassName('product')
+    for (let product of productsArray){
+        product.classList.remove("on-offer")
+    }
+```
+
+### QuerySelector()
+
+```jsx
+submitBtn.addEventListener('click', function(){
+    const checkedRadio = document.querySelector('input[type="radio"]:checked')
+    console.log(checkedRadio.value)
+})
+```
+
+[https://different-marmoset-f7b.notion.site/Has-an-emotion-been-chosen-5397b94d519f438796d0af0d930eecc4](https://www.notion.so/5397b94d519f438796d0af0d930eecc4?pvs=21)
+
+### .filter()
+
+```jsx
+const ages = [1, 5, 9, 23, 56, 10, 47, 70, 10, 19, 23, 18]
+
+const adults = ages.filter(function(age){
+    return age >= 18
+})
+
+console.log(adults)
+```
+
+[https://different-marmoset-f7b.notion.site/Animated-GIFs-only-3027c713bfcf4af5a56111352c496778](https://www.notion.so/3027c713bfcf4af5a56111352c496778?pvs=21)
+
+### Twimba
+
+```jsx
+<textarea
+				placeholder="What's happening?"
+				id="tweet-input"
+			></textarea>
+			//resize: none; CSS
+```
+
+```jsx
+const characters = [
+    {
+        title: 'Ninja',
+        emoji: '🥷',
+        powers: ['agility', 'stealth', 'aggression'],
+    },
+    {
+        title: 'Sorcerer',
+        emoji: '🧙',
+        powers: ['magic', 'invisibility', 'necromancy'],
+    },
+    { 
+        title: 'Ogre',
+        emoji: '👹',
+        powers: ['power', 'stamina', 'shapeshifting'],
+    },  
+    { 
+        title: 'Unicorn',
+        emoji: '🦄',
+        powers: [ 'flight', 'power', 'purity'],
+    }
+]
+
+// for (let character of characters){
+//     console.log(character)
+// }
+
+characters.forEach(function(character){
+    console.log(character.powers)
+```
+
+```jsx
+const characters = [
+    {
+        title: 'Ninja',
+        emoji: '🥷',
+        powers: ['agility', 'stealth', 'aggression'],
+    },
+    {
+        title: 'Sorcerer',
+        emoji: '🧙',
+        powers: ['magic', 'invisibility', 'necromancy'],
+    },
+    { 
+        title: 'Ogre',
+        emoji: '👹',
+        powers: ['power', 'stamina', 'shapeshifting'],
+    },  
+    { 
+        title: 'Unicorn',
+        emoji: '🦄',
+        powers: [ 'flight', 'power', 'purity'],
+    }
+]
+
+// for (let character of characters){
+//     console.log(character)
+// }
+
+characters.forEach(function(character){
+    console.log(character.powers)
+character.powers.forEach(function(power){
+    console.log(power)
+})
+})
+```
+
+- CDN
+    
+    ![Screenshot 2024-08-10 104112.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/c8539def-e947-4bb9-ac7b-54dd4955ef49/87eaa35a-f7ea-4819-95d5-70195ed5027d/Screenshot_2024-08-10_104112.png)
+    
+    Link for [CDN](https://cdnjs.com/libraries/font-awesome)
+    
+- Data attribute( )
+    
+    Way of storing extra information in HTML elements
+    
+    Syntax -  **data-*(Unique-name) = “String”** (***** represents the **Unique name** given to the data). The string is image Id 
+    
+    Don’t use Uppercase letters when naming **data attributes** in HTML
+    
+    Use camel case in JS when adding dash in Html for data attribute
+    
+    ```html
+    <i class="fa-solid fa-heart" data-heart="image-1"></i>
+    				<i class="fa-solid fa-share" data-share="image-1"></i>
+    				
+    				// to access in JS
+    				  <span class="tweet-detail">
+                        <i class="fa-solid fa-heart"
+                        data-like="${tweet.uuid}"
+                        ></i>
+                        **${tweet.likes}**
+                    </span>
+    				
+    ```
+    
+    **-Use of data attribute**
+    target is element clicked to trigger event listener
+    
+    dataset stores data 
+    
+    ```jsx
+    <i class="fa-solid fa-share" data-share-icon="image-1"></i>
+    document.addEventListener('click', function(e) {
+        if (e.target.dataset.shareIcon){
+            console.log(**e.target.dataset.shareIcon**)
+        }
+        else if (e.target.dataset.heart){
+            console.log(e.target.dataset.heart)
+        }
+    })
+    ```
+    
+
+- handleLikeClick
+    
+    [Link](https://www.notion.so/e926bc6349c543a79984a08f1b1dd099?pvs=21)
+    
+    ```jsx
+    function handleLikeClick(tweetId){
+        
+        const targetTweetObj = tweetsData.filter(function(tweet){
+            return tweet.uuid === tweetId
+        })[0]
+        
+        console.log(targetTweetObj)
+    ```
+    
+- Filter()
+    
+    ```jsx
+    const ages = [1, 5, 9, 23, 56, 10, 47, 70, 10, 19, 23, 18]
+    
+    const adults = ages.filter(function(age){
+    //return age>=18 
+        if (age >= 18){
+            return true
+        }
+    })
+    
+    console.log(adults)
+    ```
+    
+- targetTweetObj
+    
+    [Link](https://www.notion.so/a0093729b7a64728bc53715b25741662?pvs=21)
+    
+- Copy of Obj and array
+    
+    not happing , it is taking from the same
+    
+    make deep copy
+</body>
+</html>
