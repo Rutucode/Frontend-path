@@ -1,0 +1,111 @@
+<script>
+  /*ES6 introduced the two new JavaScript keywords: let and const. These two keywords provided Block Scope in JavaScript --------- Variables defined with let can not be redeclared. Variables defined with var can be redeclared. Use const when you declare: A new Array A new Object A new Function A new RegExp */
+
+  // Create an Array:
+  const cars = ["Saab", "Volvo", "BMW", "Benz"];
+  // Change an element:
+  cars[0] = "toyota";
+  cars[3] = "Kia";
+  // Add an element:
+  cars.push("Audi");
+  cars.push("Benz");
+  // Display the Array:
+  document.getElementById("practiceOne").innerHTML = cars;
+  //document.getElementById("demo").innertext = cars;
+  //-----------------------------------------------------------------------
+</script>
+<script>
+  // Create an object:
+  const car = { type: "Fiat", model: "500", color: "white" };
+  // Change a property:
+  car.color = "red";
+  // Add a property:
+  car.owner = "Johnson";
+  // Display the property:
+  document.getElementById("practiceTwo").innerHTML =
+    "Car owner is " + car.owner;
+  document.getElementById("demo").innerHTML = "Car color is " + car.color;
+
+  /*JavaScript has 8 Datatypes String (primitive data type)
+ Number (primitive data type) 
+ Bigint (primitive data type) 
+ Boolean (primitive data type) 
+ Undefined (primitive data type) 
+ Null (primitive data type) 
+ Symbol (primitive data type) 
+ Object */
+</script>
+<!-- BREAK------------------------------------------------------------- -->
+<script>
+  let n = 2;
+  function square(num) {
+    var ans = num * num;
+    return ans;
+  }
+  var square2 = squarne(n);
+  var square4 = square(4);
+  //-------------------------------------------
+</script>
+<h1>JavaScript Objects</h1>
+<h2>Creating an Object</h2>
+<p id="demo"></p>
+<p id="practice1"></p>
+<script>
+  // Create an Object:
+  const car = { type: "Fiat", model: "500", color: "white" };
+  // Display Data from the Object:
+  document.getElementById("demo").innerHTML = "The car type is " + car.type;
+  //Pracice document.getElementById("practice1").innerHTML = "The car color is " + car.color;
+</script>
+
+<!-- JS Objects name:value pairs are also called key:value pairs. object literals are also called object initializers. -->
+<!-- BREAK-------------------------------------------- -->
+
+<p id="demo"></p>
+<p id="personInfo"></p>
+<p id="practiceTwo"></p>
+<script>
+  // Create an Object:
+  const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue",
+  };
+  let about = {
+    johnWork: "IT Professional",
+    likes: "swimming",
+    status: "married",
+  };
+  // Create an Object
+  const person1 = {};
+  /* Other way (const person = new Object();) no need to use new Object(). For readability, simplicity and execution speed, use the object literal method. */
+
+  // Add Properties
+  person.firstName = "John";
+  person.lastName = "Doe";
+  person.age = 50;
+  person.eyeColor = "blue";
+  
+  // Display Data from the Object:
+  document.getElementById("demo").innerHTML =
+    person.firstName + " is " + person.age + " years old.";
+
+  //My Practice
+  document.getElementById("personInfo").innerHTML =
+    "John works as a " +
+    about.johnWork +
+    ". He is " +
+    about.status +
+    " and he likes " +
+    about.likes +
+    ".";
+  //Practice - Other type to accessor fetch object is
+  document.getElementById("practiceTwo").innerHTML =
+    "Jhon's last name is " + person["lastName"];
+</script>
+<!-- 
+         You can access object properties in two ways: 
+         objectName.propertyName 
+         objectName["propertyName"] 
+         -->
