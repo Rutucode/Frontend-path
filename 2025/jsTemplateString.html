@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Template Strings</h1>
+<p>With back-ticks, you can use both single and double quotes inside a string:</p>
+<p id = "demo1"></p>
+<script>
+let text = `He's often called "Johny"`
+document.getElementById("demo1").innerHTML = text;
+</script>
+<p>-----------------------------------------------------------------------------------------------------</p>
+<p>Templates allow multiline strings:</p>
+<p id = "demo2"></p>
+<script>
+let textTemp = `The quick brow fox jumps over the lazy dog`;
+document.getElementById("demo2").innerHTML= textTemp;
+</script>
+<p>-------------------------------------------------------------------------------------------------------</p>
+<p id ="demo3"></p>
+<script>
+let firstName = "John";
+let lastName = "Doe";
+let temp = `welcome ${firstName} ${lastName} to the annual meet`
+document.getElementById("demo3").innerHTML = temp
+</script>
+<p>-------------------------------------------------------------------------------------------------------</p>
+<p id="demo4"></p>
+<script>
+let price = 10;
+let VAT = 0.25;
+let total = `Total:${(price * (1 + VAT)).toFixed(2)}`
+document.getElementById("demo4").innerHTML = total;
+</script>
+<p>-------------------------------------------------------------------------------------------------------</p>
+<p><b>The toFixed() method rounds a number to a given number of digits.</b></p>
+<h4 style =" color: green;"><u>For working with money, toFixed(2) is perfect.</u></h4>
+<p id="demo5"></p>
+<script>
+let num = 9.656;
+document.getElementById("demo5").innerHTML =
+num.toFixed(0) + "<br>";
+</script>
+<p><b><i>It rounds of number</i></b></p>
+<p>-------------------------------------------------------------------------------------------------------</p>
+
+<p><b>The toPrecision() method returns a string, with a number written with a specified length:</b></p>
+<p id="demo6"></p>
+<script>
+let x = 9.656
+document.getElementById("demo6").innerHTML = 
+x.toPrecision() + "<br>" +
+x.toPrecision(2) + "<br>" +
+x.toPrecision(4) + "<br>" +
+x.toPrecision(6) ;
+</script>
+<p>-------------------------------------------------------------------------------------------------------</p>
+<p><b>The valueOf() method returns a number as a number:</b></p>
+<p id="demo7"></p>
+<script>
+let number = 123;
+document.getElementById("demo7").innerHTML = 
+number.valueOf() + "<br>" +
+(123).valueOf() + "<br>" +
+(100 + 23).valueOf();
+</script>
+
+</body>
+</html>

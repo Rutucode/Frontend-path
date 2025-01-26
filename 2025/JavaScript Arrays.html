@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice of Js Arrays</title>
+</head>
+    <body>
+        <header>
+            <h1 style="color: #000099";>JavaScript Arrays</h1>
+        </header>
+        <section>
+        <p id="demo1"></p>
+        <script>
+        const cars = ["Saab", "Audi", "Volo", "BMW"];
+        //cars[0] = "Opel" to change
+        document.getElementById("demo1").innerHTML = cars;
+        </script>
+        </section>
+<p>---------------------------------------------------------------------------------------------------</p>
+        <h4>Provide new element to array</h4>
+        <!--
+        <p id="demo2"></p>
+        <script>
+        /*
+        const carName = [];
+        carName[0]= "Saab";
+        carName[1] = "Volvo";
+        document.getElementById("demo2").innerHTML = carName;*/
+        </script>
+        -->
+        <p id="demo2"></p>
+
+        <script>
+        const carName = [];
+        carName[0]= "Saab";
+        carName[1]= "Volvo";
+        carName[2]= "BMW";
+        document.getElementById("demo2").innerHTML = carName;
+        </script>
+        <p>---------------------------------------------------------------------------------------------------</p>
+        <h4>Using Js Keyword <i>NEW</i></h4>
+        <p id="demo3"></p>
+        <script>
+        const newArr = new Array ("Saab", "Audi", "Volvo", "BMW");
+        document.getElementById("demo3").innerHTML = newArr
+        </script>
+        <p>---------------------------------------------------------------------------------------------------</p>
+        <p>The toString() method returns an array as a comma separated string:</p>
+        <p id="demo4"></p>
+        <script>
+        const fruits = ["Banana", "Apple", "Orange", "Grapes"];
+        document.getElementById("demo4").innerHTML = fruits.toString()
+        </script>
+        <p>---------------------------------------------------------------------------------------------------</p>
+            <p>
+            Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays.
+            <br>
+            But, JavaScript arrays are best described as arrays.
+            <br>
+            Arrays use numbers to access its "elements"
+            </p>
+            <p id="demo5"></p>
+            <script>
+            const veg = ["Potato", "capcicum"]
+            document.getElementById("demo5").innerHTML = veg[0];
+            </script>
+        <p>---------------------------------------------------------------------------------------------------</p>
+            <h2>Objects</h2>
+            <p>Objects use names to access its "members".</p>
+            <p id="demo6"></p>
+            <script>
+            const person = {firstName:"John", lastName:"Doe", age:46};
+            document.getElementById("demo6").innerHTML = person.firstName;
+            </script>
+        <p>---------------------------------------------------------------------------------------------------</p>
+
+            <h3>The Length Property</h3>
+            <p>
+            cars.length   // Returns the number of elements <br>
+            cars.sort()   // Sorts the array
+            </p>
+            <p id="length"></p>
+            
+            <script>
+            const animals = ["Lion", "Monkey", "Elephant"];
+            let length = animals.length;
+            document.getElementById("length").innerHTML = length;
+            </script> 
+            <p>The length property returns the length of an array:</p>
+            <!-- <p id="Length"></p> -->
+            <!-- <script>
+            const animal = ["Banana", "Orange", "Apple", "Mango"];
+            let size = animal.length;
+            document.getElementById("Length").innerHTML = size;
+            </script> -->
+            <p>---------------------------------------------------------------------------------------------------</p>
+            
+            <h3>Acessing the first array element</h3>
+            <p id="demo7"></p>
+            <script>
+            const birds = ["parrot", "Sparrow"]
+            document.getElementById("demo7").innerHTML = birds[0]
+            </script>
+            <p>---------------------------------------------------------------------------------------------------</p>
+            <h3>Accessing the Last Array Element</h3>
+            <p id="demo8"></p>
+            <script>
+                const flights = ["AirIndia", "Indigo", "Vistara"]
+                document.getElementById("demo8").innerHTML = flights[flights.length-1]
+            </script>
+            <p>---------------------------------------------------------------------------------------------------</p>
+            <h3>Looping Array Elements</h3>
+            <p>One way to loop through an array, is using a for loop</p>
+            <p id="demo9"></p>
+
+            <script>
+                const bikes = ["KTM", "Ola", "TVS"]
+                let bikLen = bikes.length;
+
+                let bullets = "<ul>"
+                for (let i = 0; i < bikLen; i++){
+                    bullets += `<li> ${bikes[i]} </li>`
+                }
+                bullets += "</ul>"
+                
+                document.getElementById("demo9").innerHTML = bullets
+            </script>
+    <!-- PRACTICE SAMPLE--------------------- -->
+    <!-- <p id="demo"></p>
+
+    <script>
+        const fruit = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruit.length;
+        
+        let texts = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+        texts += "<li>" + fruit[i] + "</li>";
+        }
+        texts += "</ul>";
+        
+        document.getElementById("demo").innerHTML = texts;
+    </script>   -->
+    <p>---------------------------------------------------------------------------------------------------</p>
+    <script>let myVariable = document.querySelector("h1");
+    </script>
+    <!-- <p>---------------------------------------------------------------------------------------------------</p> -->
+    <!-- <p style="color: red; font-family: Verdana, Geneva, Tahoma, sans-serif ;"><b>Unsolved</b></p> -->
+    <h2>The forEach() Method</h2>
+
+    <p>Call a function for each array element:</p>
+    <p>Array.forEach() function:</p>
+
+    <p id="demo10"></p>
+
+    <script>
+        const fish = ["catfish", "mudfish", "angelfish"];
+
+        let points =  "<ul>" ;
+        fish.forEach(myFunction);
+        points += "</ul>";
+
+         function myFunction(value){
+             points +=`<li> ${value} </li>`;
+         }
+        /*
+        function myFunction(value) {
+        points += "<li>" + value + "</li>";
+        } 
+        */
+        document.getElementById("demo10").innerHTML = points;
+    </script>
+  
+    <p>---------------------------------------------------------------------------------------------------</p>
+
+        <h2>Adding Array Elements</h2>
+        <p>way to add a new element to an array is using the push() method:</p>
+        <p>The push method appends a new element to an array.</p>
+
+        <button onclick="pushFunction()">Click button</button>
+        <p id="demo11"></p>
+
+        <script>
+            const randomArr = ["Apple", "Mango", "banana", "grapes"]
+            document.getElementById("demo11").innerHTML = randomArr;
+            
+            function pushFunction(){
+                randomArr.push("blabla")
+                document.getElementById("demo11").innerHTML = randomArr;
+            }
+        </script> 
+    <p>---------------------------------------------------------------------------------------------------</p>
+    <!-- Other way -->
+    <p>The length property provides an easy way to append new elements to an array without using the push() method.</p>
+
+    <button onclick="lengthFunction()">Click button to add uing length prop</button>
+     <p id="demo12"></p>
+     <script>
+        const addArr = ["lemon", "orange"]
+        document.getElementById("demo12").innerHTML = addArr
+
+        function lengthFunction(){
+            addArr[addArr.length] = "SweetLime"
+            document.getElementById("demo12").innerHTML = addArr;
+        }
+     </script>
+    <p>---------------------------------------------------------------------------------------------------</p>
+    <!-- <h3>Associative Arrays</h3>  -->
+    <!-- not praticed -->
+        <p>
+        You should use objects when you want the element names to be strings (text).
+        <br>
+        You should use arrays when you want the element names to be numbers.
+        </p>
+
+        <h3>JavaScript new Array()</h3>
+
+        <p>
+            JavaScript has a built-in array constructor new Array().
+            <br>
+            But you can safely use [] instead.
+            <br>
+            These two different statements both create a new empty array named points:
+            <br>
+            const points = new Array(); 
+            <br>
+            const points = [];
+        </p>
+
+        <p>To check if array is array</p>
+        <p id = "demo13"></p>
+        <script>
+            const sampleArr = ["apple", "mango", "stawberry"]
+            document.getElementById("demo13").innerHTML = Array.isArray(sampleArr)
+        </script>
+    </body>
+</html>

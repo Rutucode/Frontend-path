@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>17-12-2024</p>
+<h1>JavaScript Strings</h1>
+<h2>The JavaScript String indexOf() Method</h2>
+
+<p>The indexOf() method returns the index (position) of the first occurrence of a string in a string, or it returns -1 if the string is not found:</p>
+<p>The position of the first occurrence of  "locate" is:</p>
+<p id="demo"></p>
+
+<script>
+let text = "Please locate where 'locate' occurs!";
+let index = text.indexOf("locate");
+document.getElementById("demo").innerHTML = index;
+
+</script>
+<p>-----------------------------------------------------------------------------</p>
+<p>The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:</p>
+<p>The position of the last occurrence of "locate" is:</p>
+<p id = "demo1"></p>
+<script>
+let textIndex = "Please locate where 'locate' occurs!";
+let lastIndex = textIndex.lastIndexOf("locate");
+document.getElementById("demo1").innerHTML = lastIndex;
+</script>
+<p>Both indexOf(), and lastIndexOf() return -1 if the text is not found:</p>
+<p>------------------------------------------------------------------------</p>
+<h2>JavaScript String search()</h2>
+<p>The search() method searches a string for a string (or a regular expression) and returns the position of the match:</p>
+<p id = "demo2"></p>
+<script>
+let testSearch = "Please locate where 'locate' occurs!";
+let searchIndex = testSearch.search("locate");
+//let index = text.search(/locate/); other way
+document.getElementById("demo2").innerHTML = searchIndex;
+</script>
+<p>---------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<p>03-01-25</p>
+<h2>JavaScript String match()</h2>
+<p>The match() method returns an array containing the results of matching a string against a string (or a regular expression).</p>
+<p>Perform a search for "ain":</p>
+
+<p id="demo3"></p>
+<script>
+let sentance = "The rain in SPAIN stays mainly in plain";
+const myArray = sentance.match("ain");
+document.getElementById("demo3").innerHTML = myArray.length + " " + myArray;
+
+</script>
+<p>---------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<p>---------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<p>---------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<p>---------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<p>---------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<p>---------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<p>---------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<p>---------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<p>---------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<p>---------------------------------------------------------------------------------------------------------------------------------------------------</p>
+
+</body>
+</html>

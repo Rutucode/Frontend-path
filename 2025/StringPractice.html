@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings </h1>
+
+<p id= "demo1"></p>
+<script>
+// x is a string
+let x = "John";
+
+// y is an object
+let y = new String("John");
+
+document.getElementById("demo1").innerHTML =
+typeof x + "<br>" + typeof y;
+
+//campare
+document.getElementById('demo2').innerHTML = (x==y)
+/*Comparing two JavaScript objects always returns false.*/
+</script>
+<p>---------------</p>
+<p id="demo2"></p>
+<p>---------------</p>
+<h2>JavaScript Strings Methods</h1>
+<h3>Strings length</h3>
+<p>The length of string is:</p>
+<p id = "demo3"></p>
+<script>
+let text = "RUTUJAPAWAR"
+document.getElementById("demo3").innerHTML = text.length
+</script>
+<p>--------------</p>
+<h3>The charAt() method</h3>
+<p>charAt() method returns the character at a specified index (position) in a string:</p>
+<p id = "demo4"></p>
+<!--
+There are 4 methods for extracting string characters:
+
+The at(position) Method
+The charAt(position) Method
+The charCodeAt(position) Method
+Using property access [] like in arrays
+-->
+<script>
+let textIndex = "HELLO WORLD"
+document.getElementById("demo4").innerHTML = textIndex.charAt(0);
+</script>
+<p>--------------</p>
+<h3>The charCodeAt() method</h3>
+<p>The charCodeAt() method returns the code of the character at a specified index in a string:</p>
+<p id = "demo5"></p>
+
+<script>
+let textCharCode = "RUTUJAPAWAR"
+document.getElementById("demo5").innerHTML = textCharCode.charCodeAt(0)
+</script>
+
+<p>--------------</p>
+<h3> The at() method</h3>
+<p>The at() method returns an indexed element from a string:</p>
+<p id="demo6"></p>
+<script>
+const name = "RUTUJA"
+let letter = name.at(2)
+document.getElementById("demo6").innerHTML = letter
+</script>
+<p>--------------</p>
+<h3>Bracket Notation</h3>
+<p>The bracked notation [] returns an indexed element from a string:</p>
+<p id = "demo7"></p>
+<script>
+const indexElement = "Chao";
+let word = indexElement[2]
+document.getElementById("demo7").innerHTML = word
+</script>
+<p>--------------</p>
+<p>Property access on strings:</p>
+<p>The first character in the string is:</p>
+<p id="demo8"></p>
+<script>
+let textProp = "WORLD";
+document.getElementById("demo8").innerHTML = textProp[0]
+</script>
+<!--Property access might be a little unpredictable:
+
+It makes strings look like arrays (but they are not)
+If no character is found, [ ] returns undefined, while charAt() returns an empty string.
+It is read only. str[0] = "A" gives no error (but does not work!)
+-->
+<p>--------------</p>
+
+<h2>Extracting String Parts</h2>
+<p>There are 3 methods for extracting a part of a string:
+<br>
+slice(start, end)<br>
+substring(start, end)<br>
+substr(start, length)<br>
+</p>
+<p>--------------</p>
+<h2>Javascript string slice</h2>
+<p>slice() extracts a part of a string and returns the extracted part in a new string.
+
+The method takes 2 parameters: start position, and end position (end not included).</p>
+<h3>The slice() method</h3>
+<p>The sliced (extracted) part of the string is:</p>
+<p id="demo9"></p>
+<script>
+/*CHEECK WHAT IS WRONG*/
+let fruits = "Apple, banana, kiwi, grapes"
+let partSlice = fruits.slice(7,13);
+document.getElementById("demo9").innerHTML = partSlice
+</script>
+<p>----------------------------------------------------------------------------------------------------------------</p>
+<h2>JavaScript String substr()</h2>
+<p>substring() is similar to slice().
+<br>
+The difference is that start and end values less than 0 are treated as 0 in substring().</p>
+<p>The substr() method extract a part of a string
+and returns the extracted parts in a new string:</p>
+
+<p id="demo10"></p>
+
+<script>
+let str1 = "Apple, Banana, Kiwi";
+document.getElementById("demo10").innerHTML = str.substring(7,6);
+</script>
+<p>---------------------------------------------------------------------------------------------------------------</p>
+<p>The substr() method extract a part of a string and returns the extracted parts in a new string:</p>
+
+<p id="demo12"></p>
+
+<script>
+let str2 = "Apple, Banana, Kiwi";
+document.getElementById("demo12").innerHTML = str.substr(7);
+</script>
+/*
+let str3 = "Apple, Banana, Kiwi";
+document.getElementById("demo").innerHTML = str.substr(-4);
+*/
+<p>---------------------------------------------------------------------------------------------------------------</p>
+
+<h2>JavaScript String Methods</h2>
+<p>Convert string to upper case:</p>
+
+<button onclick="upperCaseFunction()">Upper Case</button>
+
+<p id="demo13">Hello World!</p>
+
+<script>
+function upperCaseFunction() {
+  let text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo13").innerHTML =
+  text.toUpperCase();
+}
+</script>
+<p>---------------</p>
+<h2>JavaScript String Methods</h2>
+<p>Convert string to lower case:</p>
+
+<button onclick="lowerCaseFunction()">Lower Case</button>
+
+<p id="demo14">Hello World!</p>
+
+<script>
+function lowerCaseFunction() {
+  let text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo14").innerHTML =
+  text.toLowerCase();
+}
+</script>
+<p>---------------</p>
+<h2>JavaScript String</h2>
+<h2>The concat() Method</h2>
+
+<p>The concat() method joins two or more strings:</p>
+
+<p id="demo15"></p>
+
+<script>
+let text1 = "Hello";
+let text2 = "World!";
+let text3 = text1.concat(" ",text2);
+document.getElementById("demo15").innerHTML = text3;
+
+//The concat() method can be used instead of the plus operator. 
+/*
+
+*/
+</script>
+<p>All string methods return a new string. They don't modify the original string.
+<br>
+Formally said:
+<br>
+Strings are immutable: Strings cannot be changed, only replaced.
+</p>
+<p>--------------</p>
+<h1>JavaScript Strings</h1>
+<h2>The trim() Method</h2>
+
+<p id="demo16"></p>
+
+<script>
+let text1Trim = "     Hello World!     ";
+let text2Trim = text1Trim.trim();
+
+document.getElementById("demo16").innerHTML =
+"Length text1 = " + text1Trim.length + "<br>Length text2 = " + text2Trim.length;
+</script>
+<p>---------------------------------------------------------------------------------------------------------------</p>
+<p>JavaScript String Padding
+<br>The padStart() method pads a string from the start.
+<br>The padEnd() method pads a string from the end.</p>
+<p>---------------------------------------------------------------------------------------------------------------</p>
+<h2>JavaScript String repeat()
+</h2>
+<p>The repeat() method returns a string with a number of copies of a string.
+
+The repeat() method returns a new string.
+
+The repeat() method does not change the original string.</p>
+<p>repeat() returns a new string with a number of copies of a string:</p>
+<p id= "demo17"></p>
+<script>
+let textRepeat = "Hello world! "
+let resultRepeat = textRepeat.repeat(2)
+document.getElementById("demo17").innerHTML = resultRepeat + " ";
+//document.getElementById("demo17").innerHTML = result 
+</script>
+<p>---------------------------------------------------------------------------------------------------------------</p>
+<h2>Replacing String Content</h2>
+<p>The replace() method replaces a specified value with another value in a string:<p>
+<p>Replace "Sweets" with "Salads" in the paragraph below:</p>
+<button onclick ="replaceFunction()">Replace</button>
+<p id = "demo18">Sweets are good for Health</p>
+<script>
+function replaceFunction(){
+let replaceText = document.getElementById("demo18").innerHTML;
+
+document.getElementById("demo18").innerHTML = replaceText.replace("Sweets", "Salads");
+
+//To replace case insensitive, use a regular expression with an /i flag (insensitive):
+//replaceText.replace(/MICROSOFT/i,"W3Schools");
+}
+</script>
+<p>
+The replace() method does not change the string it is called on.
+<br>
+The replace() method returns a new string.
+<br>
+The replace() method replaces only the first match
+</p>
+<p><b>By default, the replace() method replaces only the first match</b>
+<br>
+By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work</p>
+<p>To replace all matches, use a regular expression with a /g flag (global match):</p>
+<button onclick="replaceAllFunction()">Try it</button>
+
+<p id="demo19">Please visit Microsoft and Microsoft!</p>
+
+<script>
+function replaceAllFunction() {
+  let replaceAllText = document.getElementById("demo19").innerHTML; 
+  document.getElementById("demo19").innerHTML =
+  replaceAllText.replace(/Microsoft/g,"W3Schools");
+}
+</script>
+<p>---------------------------------------------------------------------------------------------------------------</p>
+<h2>JavaScript String ReplaceAll()</h2>
+<p id="demo20"></p>
+<script>
+let wordReplace = "I love cats. Cats are very popular and lovely."
+wordReplace =  wordReplace.replaceAll("cats", "dogs")
+wordReplace = wordReplace.replaceAll("Cats", "Dogs")
+
+document.getElementById("demo20").innerHTML = wordReplace
+</script>
+<p>The replaceAll() method allows you to specify a regular expression instead of a string to be replaced.
+<br>
+If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown.</p>
+<p id= "demo21"></p>
+<script>
+let textGlobalReplace = "I love cats. Cats are very easy to love. Cats are very popular";
+textGlobalReplace = textGlobalReplace.replaceAll(/Cats/g,"Dogs");
+textGlobalReplace = textGlobalReplace.replaceAll(/cats/g,"dogs");
+
+document.getElementById("demo21").innerHTML = textGlobalReplace;
+</script>
+<p>---------------------------------------------------------------------------------------------------------------</p>
+<!--
+A string can be converted to an array with the split() method:
+<p>Display the first array element, after a string split:</p>
+
+<p id="demo"></p>
+
+<script>
+let text = "a,b,c,d,e,f";
+const myArray = text.split(",");
+document.getElementById("demo").innerHTML = myArray[0];
+</script>
+-----------------------------------------------------------
+<h2>The split().Method</h2>
+
+<p id="demo"></p>
+
+<script>
+let text = "Hello";
+const myArr = text.split("");
+
+text = "";
+for (let i = 0; i < myArr.length; i++) {
+  text += myArr[i] + "<br>"
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+-->
+</body>
+</html>
