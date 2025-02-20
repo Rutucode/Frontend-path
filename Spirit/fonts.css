@@ -1,0 +1,136 @@
+body {font-family: 'ScandinavianRegular', 'Arial', 'Helvetica', sans-serif; position: relative;}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+.bold, 
+strong { 
+	font-family: 'scandinavianblack', 'Arial', 'Helvetica', sans-serif; 
+	text-transform :uppercase;
+}
+.bold-narrow { font-family: 'scandinavianbold','Arial', 'Helvetica', sans-serif;}
+.regular-book { font-family: 'ScandinavianRegularBook', 'Arial', 'Helvetica', sans-serif;}
+
+/* ---------------------------------------------------------------------------
+ *2. Font Face
+ * ---------------------------------------------------------------------------
+*/
+
+@font-face {
+	 font-family: 'ScandinavianRegular';
+	 src: url('../fonts/ScandinavianNew-Regular.eot');
+	 src: url('../fonts/ScandinavianNew-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ScandinavianNew-Regular.woff') format('woff'),
+		url('./assets/fonts/') format('woff2'),
+		url('./assets/fonts/ScandinavianNew-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	 font-family: 'ScandinavianRegularBook';
+	 src: url('../fonts/ScandinavianNewBook-Regular.eot');
+	 src: url('../fonts/ScandinavianNewBook-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ScandinavianNewBook-Regular.woff') format('woff'),
+		url('../fonts/ScandinavianNewBook-Regular.woff2') format('woff2'),
+		url('../fonts/ScandinavianNewBook-Regular.ttf') format('truetype');
+}
+
+ @font-face {
+	 font-family: 'scandinavianblack';
+	 src: url('../fonts/ScandinavianNew-Black.eot');
+	 src: url('../fonts/ScandinavianNew-Black.woff') format('woff'),
+		 url('./assets/fonts/scandinavian-black-webfont.woff') format('woff'),  
+		 url('./assets/fonts/scandinavian-black-webfont.ttf') format('truetype');
+	 font-weight: normal;
+	 font-style: normal;
+}
+
+ @font-face {
+	 font-family: 'scandinavianbold';
+	 src: url('../fonts/ScandinavianNew-Bold.eot');
+	 src: url('../fonts/ScandinavianNew-Bold.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/ScandinavianNew-Bold.woff') format('woff'),
+		 url('../fonts/ScandinavianNew-Bold.woff2') format('woff2'), 
+		 url('../fonts/ScandinavianNew-Bold.ttf') format('truetype');
+	 font-weight: normal;
+	 font-style: normal;
+}
+/* REACT */
+/* :root {
+    font-family: 'Scandinavian New Book';
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+} */
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* To override the default Bootstrap font and apply a local font via the `body` tag in your CSS file, you can follow these steps:
+
+### 1. **Add your local font to the CSS file:**
+
+Make sure you've included your local font by defining it with the `@font-face` rule. Here's an example:
+
+```css
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('path-to-your-font.woff2') format('woff2'),
+       url('path-to-your-font.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+```
+
+Ensure that the font files are correctly linked (you can host them locally or from a server).
+
+### 2. **Override Bootstrap's Font in the `body` Tag:**
+
+After defining the font, you can now override the default Bootstrap font by applying it in the `body` tag in your CSS:
+
+```css
+body {
+  font-family: 'MyCustomFont', sans-serif;
+}
+```
+
+This will replace Bootstrap's default font with your custom font for the entire page.
+
+### 3. **Specificity and Bootstrap Order:**
+
+If Bootstrap's styles are applied after your custom CSS, you may need to ensure your custom CSS is loaded last or has higher specificity. To ensure it applies correctly:
+
+- Make sure your custom CSS file is loaded **after** Bootstrap's CSS file.
+- Or, use `!important` (although it’s not recommended for large projects) for a stronger override:
+
+```css
+body {
+  font-family: 'MyCustomFont', sans-serif !important;
+}
+```
+
+### 4. **Font Stack:**
+
+Make sure to include a fallback font in case the local font fails to load. For example, if `MyCustomFont` is unavailable, it will fall back to `sans-serif`:
+
+```css
+body {
+  font-family: 'MyCustomFont', Arial, sans-serif;
+}
+```
+
+### Final Example:
+
+```css
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('path-to-your-font.woff2') format('woff2'),
+       url('path-to-your-font.woff') format('woff');
+}
+
+body {
+  font-family: 'MyCustomFont', sans-serif;
+}
+```
+
+By doing this, you'll override Bootstrap’s font with your local font. */

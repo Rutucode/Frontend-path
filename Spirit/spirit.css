@@ -1,0 +1,303 @@
+/* In your CSS file */
+@font-face {
+  font-family: 'ScandinavianNew'; /* Define the font name */
+  src: url('./assets/fonts/ScandinavianNew-Regular.woff2') format('woff2'), /* URL to the font file */
+       url('./assets/fonts/ScandinavianNew-Bold.woff') format('woff'),
+       url('./assets/fonts/ScandinavianNew-Regular.ttf') format('truetype');
+      
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'scandinavianblack'; /* Define the font name */
+  src: url('./assets/fonts/ScandinavianNew-Bold.woff') format('woff'),
+       url('./assets/fonts/ScandinavianNew-Bold.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Scandinavian Serif'; /* Define the font name */
+  src: url('./assets/fonts/ScandinavianSerif-BoldItalic.ttf') format('truetype');  
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'CustomFont', sans-serif;
+}
+
+
+
+:root{
+  --background-color : #f6f6f6;
+  --Cargo-Primary-Blue-B2: #000099;
+  --font-color: #333333;
+  --Button : #FFD6AF;
+
+}
+*{
+  margin: 0;
+  font-family: 'ScandinavianNew', 'ScandinavianRegular',  'ScandinavianRegularBook', Arial, Helvetica, sans-serif;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+.bold, 
+strong { 
+	font-family: 'scandinavianblack', 'Arial', 'Helvetica', sans-serif; 
+	text-transform :uppercase;
+}
+button{
+  text-transform: uppercase;
+  color: var(--Cargo-Primary-Blue-B2);
+  width: 194;
+  height: 48;
+  top: 152px;
+  left: 83px;
+  gap: 4px;
+  border-radius: 100px;
+  padding-top: 16px;
+  padding-right: 32px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  background: var(--Button, #FFD6AF);
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  justify-content: center;
+}
+button:hover{
+  background: #F2BA91;
+  text-transform: uppercase;
+  color: var(--Cargo-Primary-Blue-B2);
+  width: 194;
+  height: 48;
+  top: 152px;
+  left: 83px;
+  gap: 4px;
+  border-radius: 100px;
+  padding: 16px 32px;
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  justify-content: center;
+}
+
+.italic{
+  font-family: 'Scandinavian Serif';
+  display: flex;
+  padding: 32px 16px;
+  font-weight: 900;
+  line-height: 45px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+
+}
+/* Navigation Section */
+nav{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  background: var(--background-color, #F6F6F6);
+  gap: 2.5rem;
+}
+
+.card-headings{
+  font-family: 'Scandinavian New',Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 70px;
+  letter-spacing: 0%;
+  text-align: center;
+  justify-content: center;
+}
+.logo{
+  padding: 8px;
+  width: 88px ; 
+  margin-left: 120px;
+}
+.nav-bar{
+  display: flex; 
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 500px;
+}
+ul{
+  display: flex; 
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.tab-list{
+  margin: 16px;
+  padding: 8px;
+  display: flex; 
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.display-end{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-end;
+}
+.tabs{
+  list-style: none;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+/* Banner */
+.banner{
+  display: flex;
+  padding: 32px 16px;
+  font-family: 'Scandinavian New';
+  font-weight: 900;
+  /* font-size: 36px; */
+  line-height: 45px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(--Cargo-Primary-Blue-B2);
+}
+
+/* Center Stage */
+.center-stage{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+}
+.quote-container{
+  padding: 8% 20%;
+  width:40%;
+  font-family: 'Scandinavian New',Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  /* font-size: 56px; */
+  line-height: 70px;
+  letter-spacing: 0%;
+  text-align: left;
+  background: var(--Cargo-Primary-Blue-B2, #000099);
+  color: white;
+}
+.quote-img-container{
+  width:60%;
+}
+
+.quote-heading{
+  font-weight: 900;
+}
+/* Section 2 Cards */
+.imp-cards{
+  display: flex;
+  background-color: var(--background-color);
+  padding: 24px 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-comp{
+  /* display: flex; */
+  background: white;
+  border: 1px solid var(--G2, #D8D8D8);
+  margin: 24px 16px;
+  padding: 24px 16px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-box{
+  width: 290;
+  height: 51;
+  top: 77px;
+  left: 34px;
+  gap: 36px;
+  border-radius: 8px;
+  border-width: 1px;
+  padding: 16px;
+  border: 1px solid #393939
+}
+
+.card-comp-heading{
+  color: var(--Cargo-Primary-Blue-B2);
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  
+}
+.rates{
+  color: var(--Cargo-Primary-Blue-B2);
+  text-decoration: underline;
+  text-align: center;
+  margin: 16px;
+}
+
+/* Section 3 OUR SERVICES */
+.our-services{
+
+  font-family: 'Scandinavian New',Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 70px;
+  letter-spacing: 0%;
+  text-align: center;
+  background: var(--Cargo-Primary-Blue-B2, #000099);
+  color: white;
+}
+
+/* Section 3 CURRENT NEWS */
+
+.location-card{
+  color: var(--Cargo-Primary-Blue-B2, #000099);
+}
+
+/* Section 3 CERTIFICATES */
+
+.certificates{
+
+  font-family: 'Scandinavian New',Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 70px;
+  letter-spacing: 0%;
+  text-align: center;
+  background: var(--Cargo-Primary-Blue-B2, #000099);
+  color: white;
+}
+
+
+/* Section 3 FAQS */
+
+/* Section 3 FAQS */
+.contact-card{
+  background-color: white;
+  border: none;
+  width: 605;
+  height: 418;
+  top: 48px;
+  left: 734.5px;
+  gap: 32px;
+  border-radius: 12px;
+  padding-top: 24px;
+  padding-right: 32px;
+  padding-bottom: 24px;
+  padding-left: 32px;
+
+}
+

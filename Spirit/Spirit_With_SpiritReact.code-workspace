@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Spirit_React"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Spirit"
+	}
+}
