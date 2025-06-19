@@ -138,6 +138,11 @@ ul{
   align-content: center;
   flex-wrap: wrap;
 }
+
+nav li:hover{
+background-color: red;
+}
+
 .tab-list{
   margin: 16px;
   padding: 8px;
@@ -172,6 +177,7 @@ ul{
   letter-spacing: 0%;
   text-align: center;
   color: var(--Cargo-Primary-Blue-B2);
+  align-items: center;
 }
 
 /* Center Stage */
