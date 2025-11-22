@@ -11,9 +11,14 @@ tweetBtn.addEventListener("click", function () {
 });
 
 function getFeedHtml() {
-  let feedHtml = "";
+  let feedHtml = ``;
 
-  characters.forEach(function (character) {
+  /*
+for (let tweet of tweetsData) {
+}
+ used forEach instead of for of loop
+*/
+  tweetsData.forEach(function (tweet) {
     feedHtml += `
     <div class="tweet">
     <div class="tweet-inner">
@@ -43,15 +48,12 @@ function getFeedHtml() {
 console.log(getFeedHtml());
 console.log(tweetsData);
 
-/*
-for (let tweet of tweetsData) {
-}
-
-*/
-
 function render() {
+  /*
   const renderFeed = document.getElementById("feed");
   renderFeed.innerHTML = getFeedHtml();
+  */
+  document.getElementById("feed").innerHTML = getFeedHtml();
 }
 
 render();
